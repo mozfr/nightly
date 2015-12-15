@@ -5,6 +5,11 @@
 
 {% block header %}Téléchargez Firefox Nightly - version {{ version }}{% endblock %}
 {% block body %}
+<h2 id="warning">Avertissement :</h2>
+<ul>
+    <li>Cette version est essentiellement destinée à des tests. Elle peut présenter des instabilités ;</li>
+    <li>Firefox Nightly envoie automatiquement des rapports statistiques (« télémétrie ») à Mozilla. <a href="https://www.mozilla.org/legal/privacy/firefox.html#telemetry">Pour en savoir plus…</a></li>
+</ul>
 <h2 id="windows">Windows</h2>
 <ul>
     <li><a href="{{ links.win32 }}">Téléchargement 32 Bits | exe</a></li>
