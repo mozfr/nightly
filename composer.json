@@ -1,0 +1,17 @@
+{
+    "require": {
+        "guzzlehttp/guzzle": "~6.0",
+        "twig/twig": "^1.0"
+    },
+
+    "require-dev": {
+        "atoum/atoum" : "~2.0",
+        "symfony/var-dumper": "~2.6",
+        "fabpot/php-cs-fixer": "~1.4"
+    },
+
+    "autoload": {
+        "psr-0": {"Nightly": "app/classes/"},
+        "files": ["app/helpers/debug.php"]
+    }
+}

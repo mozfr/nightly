@@ -1,0 +1,25 @@
+{# home.html.twig ; ceci est un commentaire #}
+{% extends "base.html.twig" %}
+
+{% block title %}{{ parent() }}{% endblock %}
+
+{% block header %}Téléchargez Firefox Nightly - version {{ version }}{% endblock %}
+{% block body %}
+<h2 id="windows">Windows</h2>
+<ul>
+    <li><a href="{{ links.win32 }}">Téléchargement 32 Bits | exe</a></li>
+    <li><a href="{{ links.win64 }}">Téléchargement 64 Bits | exe</a></li>
+</ul>
+
+<h2 id="linux">Linux (Intel)</h2>
+<ul>
+    <li><a href="{{ links.lin32 }}">Téléchargement 32 Bits | tar.bz2</a></li>
+    <li><a href="{{ links.link64 }}">Téléchargement 64 Bits | tar.bz2</a></li>
+</ul>
+
+<h2 id="mac">MacOS</h2>
+<ul>
+    <li><a href="{{ links.macos }}">Téléchargement | dmg</a></li>
+</ul>
+
+{% endblock %}
