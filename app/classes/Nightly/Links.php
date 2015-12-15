@@ -18,7 +18,7 @@ class Links extends Version
             'win32' => $this->base_link . 'firefox-' . $this->version . '.' . $this->locale . '.win32.installer.exe',
             'win64' => $this->base_link . 'firefox-' . $this->version . '.' . $this->locale . '.win364.installer.exe',
             'lin32' => $this->base_link . 'firefox-' . $this->version . '.' . $this->locale . '.linux-i686.tar.bz2',
-            'lin32' => $this->base_link . 'firefox-' . $this->version . '.' . $this->locale . '.linux-x86_64.tar.bz2',
+            'lin64' => $this->base_link . 'firefox-' . $this->version . '.' . $this->locale . '.linux-x86_64.tar.bz2',
             'macos' => $this->base_link . 'firefox-' . $this->version . '.' . $this->locale . '.mac.dmg',
         ];
     }
