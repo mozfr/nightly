@@ -1,0 +1,333 @@
+
+@font-face {
+    font-family: 'FiraSans-Extra';
+    src: url(../fonts/FiraSans/FiraSans-UltraLight.woff2) format('woff2'),
+         url(../fonts/FiraSans/FiraSans-UltraLight.woff) format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraSans';
+    src: url(../fonts/FiraSans/FiraSans-Light.woff2) format('woff2'),
+         url(../fonts/FiraSans/FiraSans-Light.woff) format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraSans';
+    src: url(../fonts/FiraSans/FiraSans-Regular.woff2) format('woff2'),
+         url(../fonts/FiraSans/FiraSans-Regular.woff) format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraSans';
+    src: url(../fonts/FiraSans/FiraSans-Medium.woff2) format('woff2'),
+         url(../fonts/FiraSans/FiraSans-Medium.woff) format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: 'FiraSans';
+    font-weight: 200;
+    color: #fff;
+    font-size: 18px;
+    line-height: 25px;
+    background: #002147;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-family: 'FiraSans';
+    font-weight: 200;
+    font-size: 40px;
+}
+
+a,
+a:active,
+a:visited {
+    color: #45c2ff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #1cb5ff;
+    text-decoration: underline;
+}
+
+p {
+    text-align: justify;
+}
+
+.container {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+#header {
+    display: block;
+    margin: 0;
+    background: #1c3f84;
+    border-bottom: 3px solid #ff9500;
+}
+
+#header .title {
+    color: #fff;
+    font-family: 'FiraSans';
+    font-size: 80px;
+    letter-spacing: -3px;
+    background: url('../img/firefox_nightly.png');
+    background-repeat: no-repeat;
+    background-position: 0px 7px, top right;
+    height: 155px;
+    line-height: 155px;
+}
+
+#header .headline {
+    vertical-align: middle;
+    display: inline-block;
+    line-height: normal;
+    text-align: left;
+    margin-left: 150px;
+}
+
+#header .firefox {
+    font-weight: 500;
+}
+
+#header .nightly {
+    font-weight: 400;
+}
+
+#header .language {
+    font-family: 'FiraSans';
+    font-weight: 200;
+    font-size: 45px;
+    letter-spacing: -1px;
+}
+
+/* Content */
+
+.page-header {
+    padding-top: 25px;
+}
+
+.page-header h1 {
+    font-weight: 300;
+    font-size: 30px;
+    text-align: center;
+}
+
+.intro {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.warning {
+    font-weight: 300;
+    font-size: 16px;
+    font-style: italic;
+    color: #c1c1c1;
+}
+
+.tabs a {
+    display: inline-block;
+    width: 33.3333%;
+    padding: 10px 0 0;
+    text-align: center;
+    background: #ddd;
+    font-size: 30px;
+    font-weight: 300;
+    color: #000;
+    text-decoration: none;
+    vertical-align: bottom;
+}
+
+.tabs a:hover {
+    background: #eee;
+    -webkit-transition: all linear 0.25s;
+    transition: all linear 0.25s;
+}
+
+.tabs a.selected {
+    background: #fff;
+}
+
+#windows,
+#mac,
+#linux {
+    display: none;
+}
+
+#windows:target,
+#mac:target,
+#linux:target {
+    display: block;
+}
+
+.logo {
+    display: inline-block;
+    height: 40px;
+    padding-left: 45px;
+    padding-top: 5px;
+}
+
+.logo.win {
+    background: url('../img/windows.png') no-repeat;
+}
+
+.logo.mac {
+    background: url('../img/mac.png') no-repeat;
+}
+
+.logo.lin {
+    background: url('../img/linux.png') no-repeat;
+}
+
+.downloads {
+    text-align: center;
+    background: #fff;
+    padding: 50px 10px;
+}
+
+.downloads ul {
+    list-style-type: none;
+}
+
+.downloads ul li {
+    display: inline-block;
+    margin: 40px;
+}
+
+.downloads h2 {
+    color: #000;
+}
+
+.downloads .bottom-links {
+    text-align: right;
+    margin: 0 45px;
+}
+
+.downloads .bottom-links a {
+    font-size: 18px;
+    padding: 5px;
+    color: #333;
+    border: 1px solid #333;
+}
+
+.banner {
+    background: #0095dd;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.banner h2 {
+    font-family: 'FiraSans-Extra';
+    font-weight: 600;
+}
+
+.cta {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.cta a.button {
+    font-size: 25px;
+    padding: 15px;
+}
+
+#screenshot {
+    height: 260px;
+    width: 959px;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: -60px;
+}
+
+#screenshot.windows {
+    background: url('../img/capture_windows.png') no-repeat;
+}
+
+#screenshot.linux {
+    background: url('../img/capture_linux.png') no-repeat;
+}
+
+#screenshot.mac {
+    background: url('../img/capture_mac.png') no-repeat;
+}
+
+.globe {
+    max-height: 120px;
+    overflow: hidden;
+}
+
+.sphere {
+    border-radius: 50%;
+    height: 1000px;
+    width: 2000px;
+}
+
+.sphere.dark-blue {
+    background: #1c3f84;
+}
+
+.sphere.light-blue {
+    background: #0095dd;
+    padding: 20px;
+    position: relative;
+    left: 50%;
+    margin: 0 0 0 -1020px;
+    text-align: center;
+}
+
+#footer {
+    display: inline-block;
+    margin-top: 60px;
+}
+
+#footer a {
+    color: #fff;
+}
+
+
+/* Form */
+
+.button:hover,
+.button:link:hover,
+.button:visited:hover,
+.button:focus,
+.button:link:focus,
+.button:visited:focus {
+    text-decoration: none;
+    background: #00abeb;
+    color: #fff;
+}
+
+.button,
+.button:link,
+.button:visited {
+    display: inline-block;
+    border-radius: 6px;
+    -webkit-transition: all linear 0.25s;
+    transition: all linear 0.25s;
+    text-align: center;
+    padding: 9px 30px;
+    margin-bottom: 20px;
+    background: #00a0dc;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}

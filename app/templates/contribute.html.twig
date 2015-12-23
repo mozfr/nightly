@@ -1,0 +1,40 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ parent() }}{% endblock %}
+
+{% block header %}Aider Mozilla en utilisant Nightly{% endblock %}
+{% block body %}
+<div class="container">
+<p class="intro">
+  Si vous n’avez pas encore installé Nightly, <a href="{{ path }}">cliquez ici</a>.
+  <br><br>
+  En signalant les problèmes au plus tôt, vous aidez à améliorer la version finale de Firefox pour des centaines de milions de personnes.
+</p>
+
+<h2>Signaler les problèmes</h2>
+<p>
+  Le signalement de problème se fait via le système <a href="https://bugzilla.mozilla.org">Bugzilla</a>. Vous pouvez créer un compte avec une adresse électronique, ou bien vous connecter avec votre compte GitHub ou un compte Persona.
+  <br>Jetez un œil à ce très bon <a href="https://tech.mozfr.org/post/2013/04/23/Rapporter-un-bogue-sur-Bugzilla">tutoriel en français pour apprendre à signaler un problème sur Bugzilla</a> ou encore <a href="https://developer.mozilla.org/fr/docs/Recommandations_pour_l'%C3%A9criture_d'un_bug">cet article MDN</a> sur les recommandations pour que le problème que vous signalez soit traité le plus efficacement possible.
+  <br><br>
+  S’il s’agit d’une erreur dans la traduction française, utilisez <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Mozilla%20Localizations&component=fr%20/%20French">ce lien</a> pour que le ticket soit directement ouvert au bon endroit dans Bugzilla.
+</p>
+
+<h2>Discuter avec d’autres utilisateurs de Nightly</h2>
+
+<h3>IRC</h3>
+<p>
+  La communauté francophone se trouve également sur IRC, sur le <a href="irc://irc.mozilla.org/mozfr">canal #mozfr du serveur irc.mozilla.org</a>. Venez discuter avec nous pour découvrir d’autres moyens d’aider Mozilla, ou tout simplement si vous avez une question liée à Nightly ou Mozilla.
+</p>
+
+<h3>Geckozone</h3>
+<p>
+  Il peut vous arriver d’avoir besoin de certaines réponses avant de signaler un problème sur Bugzilla. Par exemple vous avez remarqué un nouveau comportement sur Nightly mais vous ne savez pas si c’est le comportement voulu ou non, ou encore votre problème est difficile à reproduire et vous cherchez à savoir si d’autres personnes l’ont constaté.
+  <br>
+  Vous pouvez poser toutes ces questions sur le <a hre="">forum francophone Geckozone dédié aux versions de développement de Firefox</a>. Certaines persones utilisent Nightly depuis de nombreuses années et suivent ses évolutions de près. Elles seront capables de vous aiguiller et de vous répondre rapidement.
+  <br>
+  Si vous n’êtes pas à l’aise en anglais pour rapporter le problème directement dans Bugzilla, c’est également l’endroit où vous pouvez demander à ce que quelqu’un le fasse pour vous.
+</p>
+
+</div>
+
+{% endblock %}

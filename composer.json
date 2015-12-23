@@ -1,7 +1,16 @@
 {
+
+  "repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/mozilla-l10n/phpclass-json"
+    }
+],
     "require": {
         "guzzlehttp/guzzle": "~6.0",
-        "twig/twig": "^1.0"
+        "twig/twig": "^1.0",
+        "components/jquery": "~2",
+        "mozillal10n/json": "~0.1"
     },
 
     "require-dev": {

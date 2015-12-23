@@ -1,2 +1,4 @@
 vendor
 composer.lock
+data
+app/config/settings.inc.php

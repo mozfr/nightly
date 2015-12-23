@@ -9,6 +9,9 @@ date_default_timezone_set('Europe/Paris');
 // Load all constants for the application
 require_once __DIR__ . '/constants.php';
 
+// Load settings
+require_once CONFIG . 'settings.inc.php';
+
 // Autoloading of classes (both /vendor and /classes)
 require_once INSTALL_ROOT . 'vendor/autoload.php';
 
