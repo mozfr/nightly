@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" href="{{ path }}assets/img/favicon.png?v=1">
 </head>
 <body role="document">
+<div class="content">
   <a id="header" href="{{ path }}">
     <div class="container title">
       <div class="headline">
@@ -22,7 +23,7 @@
 
     {% block body %}
     {% endblock %}
-
+</div>
     {#FIXME: Generate the globe using pseudo-elements #}
     <div class="globe">
       <div class="sphere light-blue">

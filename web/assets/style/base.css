@@ -39,6 +39,9 @@ body {
     font-size: 18px;
     line-height: 25px;
     background: #002147;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 h1,
@@ -74,6 +77,17 @@ p {
     text-align: justify;
 }
 
+img.image {
+    background-color: #fff;
+    border: 10px solid #fff;
+    display: block;
+    margin: 0 auto 1.5em;
+}
+
+.content {
+  flex: 1;
+}
+
 .center {
     text-align: center;
 }
@@ -88,7 +102,7 @@ p {
 #header {
     display: block;
     margin: 0;
-    background: #1c3f84;
+    background-color: #1c3f84;
     border-bottom: 3px solid #ff9500;
 }
 
@@ -99,7 +113,7 @@ p {
     letter-spacing: -3px;
     background: url('../img/firefox_nightly.png');
     background-repeat: no-repeat;
-    background-position: 0px 7px, top right;
+    background-position: 0 7px, top right;
     height: 155px;
     line-height: 155px;
 }
@@ -157,7 +171,7 @@ p {
     width: 33.3333%;
     padding: 10px 0 0;
     text-align: center;
-    background: #ddd;
+    background-color: #ddd;
     font-size: 30px;
     font-weight: 300;
     color: #000;
@@ -166,13 +180,13 @@ p {
 }
 
 .tabs a:hover {
-    background: #eee;
+    background-color: #eee;
     -webkit-transition: all linear 0.25s;
     transition: all linear 0.25s;
 }
 
 .tabs a.selected {
-    background: #fff;
+    background-color: #fff;
 }
 
 #windows,
@@ -208,7 +222,7 @@ p {
 
 .downloads {
     text-align: center;
-    background: #fff;
+    background-color: #fff;
     padding: 50px 10px;
 }
 
@@ -238,7 +252,7 @@ p {
 }
 
 .banner {
-    background: #0095dd;
+    background-color: #0095dd;
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -291,11 +305,11 @@ p {
 }
 
 .sphere.dark-blue {
-    background: #1c3f84;
+    background-color: #1c3f84;
 }
 
 .sphere.light-blue {
-    background: #0095dd;
+    background-color: #0095dd;
     padding: 20px;
     position: relative;
     left: 50%;
@@ -322,7 +336,7 @@ p {
 .button:link:focus,
 .button:visited:focus {
     text-decoration: none;
-    background: #00abeb;
+    background-color: #00abeb;
     color: #fff;
 }
 
@@ -336,7 +350,7 @@ p {
     text-align: center;
     padding: 9px 30px;
     margin-bottom: 20px;
-    background: #00a0dc;
+    background-color: #00a0dc;
     color: #fff;
     font-size: 20px;
     border: none;
