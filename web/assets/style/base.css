@@ -67,6 +67,10 @@ p {
     text-align: justify;
 }
 
+.center {
+    text-align: center;
+}
+
 .container {
     position: relative;
     width: 1000px;

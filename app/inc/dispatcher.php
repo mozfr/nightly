@@ -5,16 +5,16 @@ switch ($url['path']) {
         $model = $view = 'home';
         break;
     case 'a-propos':
-        $model = $view = 'about';
+        $view = 'about';
         break;
     case 'participer':
-        $model = $view = 'contribute';
+        $view = 'contribute';
         break;
     case 'stats':
         $model = 'stats';
         break;
     default:
-        $model = $view = 'home';
+        $view = '404';
         break;
 }
 
