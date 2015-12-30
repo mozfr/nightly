@@ -1,38 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>{% block title %}Téléchargez Firefox Nightly en français{% endblock %}</title>
-    <meta name="description" content="Téléchargez la version officielle de Firefox Nightly en français pour Windows, Mac OS et Linux. Découvrez comment aider Mozilla en utilisant Nightly et avoir un impact auprès de l’ensemble des utilisateurs de Firefox.">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ path }}assets/style/base.css">
-    <link rel="icon" type="image/png" href="{{ path }}assets/img/favicon.png?v=1">
-</head>
-<body role="document">
-  <a id="header" href="{{ path }}">
-    <div class="container title">
-      <div class="headline">
-        <span class="firefox">Firefox</span> <span class="nightly">Nightly</span> <span class="language">en français</span>
-      </div>
-    </div>
-  </a>
+{% extends "base.html.twig" %}
+
+{% block title %}{{ parent() }}{% endblock %}
+
+{% block header %}Erreur 404{% endblock %}
+{% block body %}
 
     <div class="container page-header center">
-        <h1>Erreur 404</h1>
-        <img src="{{ path }}assets/img/firefox_404.png" alt="logo error 404">
-        <p class="center">Nous avons beau chercher, nous ne trouvons pas la page à laquelle vous essayez d'accéder !</p>
+        <h1>Une erreur s'est produite</h1>
+        <p class="center">Nous avons beau chercher, nous ne trouvons pas la page à laquelle vous essayez d’accéder&nbsp;!</p>
     </div>
 
-    <div class="globe">
-      <div class="sphere light-blue">
-        <div class="sphere dark-blue">
-          <div id="footer">
-            <a href="https://github.com/mozfr/nightly">Contribuer à ce site</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <script type="text/javascript" src="{{ path }}assets/js/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="{{ path }}assets/js/switch-os.js"></script>
-</body>
-</html>
+{% endblock %}
