@@ -41,6 +41,13 @@ body {
     background: #002147;
 }
 
+h1,
+h2,
+h3,
+h4 {
+    line-height: normal;
+}
+
 h1 {
     font-size: 40px;
 }
