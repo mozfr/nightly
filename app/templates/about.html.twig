@@ -1,0 +1,38 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ parent() }}{% endblock %}
+
+{% block header %}À propos de Nightly{% endblock %}
+{% block body %}
+<div class="container">
+  <a class="button" href="{{ path }}">Retour</a>
+  <br>
+
+  <h2>Qu’est-ce que Nightly&nbsp;?</h2>
+  <p>Firefox Nightly est une branche de développement de Firefox. C’est sur cette version que les nouvelles fonctionnalités de Firefox sont ajoutées, pour ensuite être stabilisées sur les branches Developer Edition puis Beta. Cette version peut donc être parfois instable, car les fonctionnalités n’ont pas encore été testées.
+  </p>
+
+  <h2>Pourquoi utiliser Nightly&nbsp;?</h2>
+  <p>
+  Il y a plusieurs avantages à utiliser cette version. D’abord vous profitez des dernières avancées de Firefox (nouvelles fonctionnalités, nouveaux services, nouveaux correctifs…). Ensuite si vous développez un site web ou des extensions, cela vous permet de tester la compatibilité au plus tôt ou bien de commencer à développer des fonctionnalités qui font appel à des technologies qui viennent d’être ajoutées à Nightly.
+  <br>
+  En utilisant Nightly, vous aidez également Mozilla. En signalant les problèmes au plus tôt, cela fait gagner du temps aux développeurs et évite de ralentir le développement de nouvelles fonctionnalités.
+  </p>
+
+  <h2>Suis-je obligé de n’utiliser que Nightly&nbsp;?</h2>
+  <p>
+  Non&nbsp;! Vous pouvez tout à fait utiliser plusieurs versions de Firefox (<i>release</i>, Developer Edition) avec Nightly. Vous pouvez choisir d’utiliser le même profil en utilisant Sync ou vous pouvez organiser différents profils pour différents usages. Consultez <a href="https://support.mozilla.org/fr/kb/utiliser-gestionnaire-profils-creer-supprimer-profils">cet article</a> pour savoir comment créer ou supprimer des profils.
+  </p>
+
+  <h2>Ma version de Nightly va-t-elle se mettre à jour comme Firefox&nbsp;?</h2>
+  <p>
+    Oui&nbsp;! Nightly se mettra à jour tout seul en arrière-plan, comme la version stable de Firefox. Vous n’aurez rien à faire. La seule différence est que les mises à jour auront lieu tous les jours.
+  </p>
+
+  <h2>J’utilise Linux, n’est-il pas préférable d’utiliser un PPA&nbsp;?</h2>
+  <p>
+    C’est plutôt déconseillé. Les versions re-empaquetées pour différentes distributions Linux sont connues pour comporter un certain nombre de bugs qui ne sont pas présents dans les binaires officiels Mozilla. Lorsque vous signalez un problème, il vous sera souvent demandé de tester sur le binaire officiel, vous gagnerez du temps à l’utiliser directement. De plus, comme vu ci-dessus, les binaires Mozilla se mettent à jour automatiquement.
+  </p>
+</div>
+
+{% endblock %}

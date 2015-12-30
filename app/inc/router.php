@@ -3,12 +3,6 @@
 $url  = parse_url($_SERVER['REQUEST_URI']);
 $file = pathinfo($url['path']);
 
-// Real files and folders don't get pre-processed
-if (file_exists($_SERVER['DOCUMENT_ROOT'] . $url['path'])
-    && $url['path'] != '/') {
-    return false;
-}
-
 // Don't process non-PHP files, even if they don't exist on the server
 if (isset($file['extension']) && $file['extension'] != 'php' && ! $api_url) {
     return false;
@@ -24,10 +18,6 @@ if ($url['path'] != '/') {
 
 // Include all valid urls here
 require_once __DIR__ . '/urls.php';
-
-if (! array_key_exists($url['path'], $urls) && ! $api_url) {
-    return false;
-}
 
 // Always redirect to an url ending with slashes
 $temp_url = parse_url($_SERVER['REQUEST_URI']);

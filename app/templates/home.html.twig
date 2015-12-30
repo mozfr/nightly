@@ -5,26 +5,58 @@
 
 {% block header %}Téléchargez Firefox Nightly en français - version {{ version }}{% endblock %}
 {% block body %}
-<h2 id="warning">Avertissement :</h2>
-<ul>
-    <li>Cette version est essentiellement destinée à des tests. Elle peut présenter des instabilités ;</li>
-    <li>Firefox Nightly envoie automatiquement des rapports statistiques (« télémétrie ») à Mozilla. <a href="https://www.mozilla.org/legal/privacy/firefox.html#telemetry">Pour en savoir plus…</a></li>
-</ul>
-<h2 id="windows">Windows</h2>
-<ul>
-    <li><a href="{{ links.win32 }}">Téléchargement 32 Bits | exe</a></li>
-    <li><a href="{{ links.win64 }}">Téléchargement 64 Bits | exe</a></li>
-</ul>
 
-<h2 id="linux">Linux (x86)</h2>
-<ul>
-    <li><a href="{{ links.lin32 }}">Téléchargement 32 Bits | tar.bz2</a></li>
-    <li><a href="{{ links.lin64 }}">Téléchargement 64 Bits | tar.bz2</a></li>
-</ul>
+<div class="container">
+<p class="intro">
+  Les versions disponibles au téléchargement proviennent de Mozilla. Firefox Nightly est essentiellement destiné à des tests et peut présenter des instabilités. <a href="{{ path }}a-propos">En savoir plus sur Nightly</a>
+  <br>Vous recherchez la version stable&nbsp;? <a href="https://www.mozilla.org/fr/firefox/?from=mozfr">Cliquez ici</a>.
+</p>
 
-<h2 id="mac">MacOS</h2>
-<ul>
-    <li><a href="{{ links.macos }}">Téléchargement | dmg</a></li>
-</ul>
+<div class="tabs">
+  <a
+  href="#windows"><span class="logo win">Windows</span></a><a
+  href="#mac"><span class="logo mac">Mac OS X</span></a><a
+  href="#linux"><span class="logo lin">Linux</span></a>
+</div>
+<div class="downloads" id="windows">
+  <h2>Nightly pour Windows</h2>
+  <ul>
+      <li><a class="button" data-link="win32" href="{{ links.win32 }}">Télécharger (32 bits)</a></li>
+      <li><a class="button" data-link="win64" href="{{ links.win64 }}">Télécharger (64 bits)</a></li>
+  </ul>
+</div>
+<div class="downloads" id="mac">
+  <h2>Nightly pour Mac OS X</h2>
+  <ul>
+      <li><a class="button" data-link="mac" href="{{ links.macos }}">Télécharger</a></li>
+  </ul>
+</div>
+<div class="downloads" id="linux">
+  <h2>Nightly pour Linux (x86)</h2>
+  <ul>
+      <li><a class="button" data-link="lin32" href="{{ links.lin32 }}">Télécharger (32 bits | tar.bz2)</a></li>
+      <li><a class="button" data-link="lin64" href="{{ links.lin64 }}">Télécharger (64 bits | tar.bz2)</a></li>
+  </ul>
+  <div class="bottom-links">
+      <a href="{{ path }}installation-linux">Tutoriel d’installation</a>
+  </div>
+</div>
+<p class="warning">
+  Firefox Nightly envoie automatiquement des rapports statistiques («&nbsp;télémétrie&nbsp;») à Mozilla. <a href="https://www.mozilla.org/legal/privacy/firefox.html#telemetry">Pour en savoir plus…</a>
+</p>
+<p class="cta">
+  <a class="cta button" href="{{ path }}participer">Comment aider Mozilla en utilisant Nightly&nbsp;?</a>
+</p>
+</div>
+<!--
+<div class="banner">
+  <div class="container">
+    <h2>Le saviez-vous&nbsp;?</h2>
+    <p>Vous pouvez utiliser Nightly aux côtés d’autres versions de Firefox, tout en synchronisant vos données entre vos profils sans risquer d’endommager les données de votre profil principal.
+    </p>
+  </div>
+</div>
+-->
+<div id="screenshot" class="windows"></div>
 
 {% endblock %}
