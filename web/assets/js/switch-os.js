@@ -49,7 +49,7 @@ $('.tabs a').click(function (e) {
 // Ping the server when user clicks on a download link
 $('.downloads a[data-link]').click(function (e) {
     $.ajax({
-        url: '/stats/?link=' + e.target.dataset.link,
+        url: 'stats/?link=' + e.target.dataset.link,
         dataType: 'jsonp',
         success: function(result) {},
         error: function(result) {},

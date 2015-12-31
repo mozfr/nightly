@@ -1,15 +1,20 @@
 {
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/mozilla-l10n/phpclass-cache"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/mozilla-l10n/phpclass-json"
+        }
+    ],
 
-  "repositories": [
-    {
-        "type": "vcs",
-        "url": "https://github.com/mozilla-l10n/phpclass-json"
-    }
-],
     "require": {
-        "twig/twig": "^1.0",
         "components/jquery": "~2",
-        "mozillal10n/json": "~0.1"
+        "mozillal10n/cache": "~0.1",
+        "mozillal10n/json": "~0.1",
+        "twig/twig": "^1.0"
     },
 
     "require-dev": {

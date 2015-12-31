@@ -1,6 +1,8 @@
 <?php
 namespace Nightly;
 
+use Cache\Cache;
+
 class Version
 {
     public $version;
@@ -34,7 +36,21 @@ class Version
      */
     private function getAuroraNumber()
     {
-        return json_decode(file_get_contents($this->json_source), true)['FIREFOX_AURORA'];
+        $cache_id = "product_details";
+        if (Cache::isActivated()) {
+            if (! $json_data = Cache::getKey($cache_id)) {
+                // No cache for this request. Read remote and cache answer on disk.
+                $json_data = json_decode(file_get_contents($this->json_source), true)['FIREFOX_AURORA'];
+                if ($json_data !== null) {
+                    Cache::setKey($cache_id, $json_data);
+                }
+            }
+        } else {
+            // Cache is disabled. Just read the value.
+            $json_data = json_decode(file_get_contents($this->json_source), true)['FIREFOX_AURORA'];
+        }
+
+        return $json_data;
     }
 
     /**
