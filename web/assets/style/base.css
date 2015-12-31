@@ -177,6 +177,8 @@ img.image {
     color: #000;
     text-decoration: none;
     vertical-align: bottom;
+    -webkit-transition: all linear 0.25s;
+    transition: all linear 0.25s;
 }
 
 .tabs a:hover {
