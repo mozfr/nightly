@@ -1,7 +1,7 @@
 <?php
 
 $urls = [
-    '/' => 'root',
+    '/'          => 'root',
     'a-propos'   => 'about',
     'participer' => 'contribute',
     'stats'      => 'stats',

@@ -3,7 +3,7 @@
 print $twig->render(
     '404.html.twig',
     [
-        'path'    => $webroot_folder
+        'path'    => $webroot_folder,
     ]
 
 );

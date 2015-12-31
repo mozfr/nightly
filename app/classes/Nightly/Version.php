@@ -7,7 +7,7 @@ class Version
     public $json_source = 'https://svn.mozilla.org/libs/product-details/json/firefox_versions.json';
     public $base_link = 'https://archive.mozilla.org/pub/firefox/nightly/latest-mozilla-central-l10n/';
 
-    public function __construct($locale='fr')
+    public function __construct($locale = 'fr')
     {
         $this->locale = $locale;
         $this->version = $this->getNightlyNumber();
@@ -27,7 +27,6 @@ class Version
         return implode('.', $nightly);
     }
 
-
     /**
      * Return the version number for Firefox Aurora
      *
@@ -46,6 +45,7 @@ class Version
     public function getFirefoxLinks()
     {
         $lead_link = $this->base_link . 'firefox-' . $this->version . '.' . $this->locale . '.';
+
         return [
             'win32' => $lead_link . 'win32.installer.exe',
             'win64' => $lead_link . 'win64.installer.exe',
