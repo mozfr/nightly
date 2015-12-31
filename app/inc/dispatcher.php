@@ -18,8 +18,10 @@ switch ($url['path']) {
         break;
 }
 
-if (isset($model))
+if (isset($model)) {
     include MODELS . $model . '.php';
+}
 
-if (isset($view))
+if (isset($view)) {
     include VIEWS . $view . '.php';
+}

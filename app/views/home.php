@@ -5,7 +5,7 @@ print $twig->render(
     [
         'version' => $current->version,
         'links'   => $current->getFirefoxLinks(),
-        'path'    => $webroot_folder
+        'path'    => $webroot_folder,
     ]
 
 );

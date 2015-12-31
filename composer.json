@@ -7,14 +7,12 @@
     }
 ],
     "require": {
-        "guzzlehttp/guzzle": "~5.0",
         "twig/twig": "^1.0",
         "components/jquery": "~2",
         "mozillal10n/json": "~0.1"
     },
 
     "require-dev": {
-        "atoum/atoum" : "~2.0",
         "symfony/var-dumper": "~2.6",
         "fabpot/php-cs-fixer": "~1.4"
     },
