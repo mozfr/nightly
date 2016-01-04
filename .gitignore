@@ -1,4 +1,5 @@
-vendor
-composer.lock
-data
 app/config/settings.inc.php
+cache/*.cache
+composer.lock
+data/*.json
+vendor

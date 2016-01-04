@@ -1,16 +1,16 @@
 <?php
 
 switch ($url['path']) {
-    case '/':
+    case $webroot_folder:
         $model = $view = 'home';
         break;
-    case 'a-propos':
+    case "{$webroot_folder}a-propos":
         $view = 'about';
         break;
-    case 'participer':
+    case "{$webroot_folder}participer":
         $view = 'contribute';
         break;
-    case 'stats':
+    case "{$webroot_folder}stats":
         $model = 'stats';
         break;
     default:

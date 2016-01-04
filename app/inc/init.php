@@ -10,15 +10,16 @@ date_default_timezone_set('Europe/Paris');
 require_once __DIR__ . '/constants.php';
 
 // Load settings
-require_once CONFIG . 'settings.inc.php';
+$settings_file = CONFIG . '/settings.inc.php';
+if (! file_exists($settings_file)) {
+    die('File app/config/settings.inc.php is missing. Please check your configuration.');
+}
+require $settings_file;
 
 // Autoloading of classes (both /vendor and /classes)
 require_once INSTALL_ROOT . 'vendor/autoload.php';
 
-$loader = new Twig_Loader_Filesystem([__DIR__ . '/../templates']);
-$twig = new Twig_Environment($loader);
-
-// Dispatch urls, use it only in web context
-if (php_sapi_name() != 'cli') {
-    require_once INC . 'dispatcher.php';
-}
+// Cache class
+define('CACHE_ENABLED', true);
+define('CACHE_PATH', INSTALL_ROOT . 'cache/');
+define('CACHE_TIME', 7200);

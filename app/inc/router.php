@@ -8,12 +8,15 @@ if (isset($file['extension']) && $file['extension'] != 'php' && ! $api_url) {
     return false;
 }
 
-if ($url['path'] != '/') {
+// Initialize the application
+require_once __DIR__ . '/init.php';
+
+if ($url['path'] != $webroot_folder) {
     // Normalize path before comparing the string to list of valid paths
     $url['path'] = explode('/', $url['path']);
     $url['path'] = array_filter($url['path']); // Remove empty items
     $url['path'] = array_values($url['path']); // Reorder keys
-    $url['path'] = implode('/', $url['path']);
+    $url['path'] = '/' . implode('/', $url['path']);
 }
 
 // Include all valid urls here
@@ -23,9 +26,16 @@ require_once __DIR__ . '/urls.php';
 $temp_url = parse_url($_SERVER['REQUEST_URI']);
 if (substr($temp_url['path'], -1) != '/') {
     unset($temp_url);
-    header('Location:/' . $url['path'] . '/');
+    header('Location: ' . $url['path'] . '/');
     exit;
 }
 
-// We can now initialize the application and dispatch urls
-require_once __DIR__ . '/init.php';
+// Load Twig
+$loader = new Twig_Loader_Filesystem([__DIR__ . '/../templates']);
+$twig = new Twig_Environment($loader);
+$twig->addGlobal('path', $webroot_folder);
+
+// Dispatch urls, use it only in web context
+if (php_sapi_name() != 'cli') {
+    require_once INC . 'dispatcher.php';
+}
