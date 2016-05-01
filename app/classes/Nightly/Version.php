@@ -6,7 +6,7 @@ use Cache\Cache;
 class Version
 {
     public $version;
-    public $json_source = 'https://svn.mozilla.org/libs/product-details/json/firefox_versions.json';
+    public $json_source = 'https://product-details.mozilla.org/firefox_versions.json';
     public $base_link = 'https://archive.mozilla.org/pub/firefox/nightly/latest-mozilla-central-l10n/';
 
     public function __construct($locale = 'fr')
