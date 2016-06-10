@@ -16,38 +16,24 @@ class Version
     }
 
     /**
-     * Return the version number for Firefox Nightly based on the latest Aurora
+     * Return the version number for Firefox Nightly
      *
      * @return string version number for Nightly
      */
-    public function getNightlyNumber()
-    {
-        $nightly = explode('.', $this->getAuroraNumber());
-        $nightly[0]++;
-        $nightly[1] = str_replace('2', '1', $nightly[1]);
-
-        return implode('.', $nightly);
-    }
-
-    /**
-     * Return the version number for Firefox Aurora
-     *
-     * @return string version number for Aurora
-     */
-    private function getAuroraNumber()
+    private function getNightlyNumber()
     {
         $cache_id = "product_details";
         if (Cache::isActivated()) {
             if (! $json_data = Cache::getKey($cache_id)) {
                 // No cache for this request. Read remote and cache answer on disk.
-                $json_data = json_decode(file_get_contents($this->json_source), true)['FIREFOX_AURORA'];
+                $json_data = json_decode(file_get_contents($this->json_source), true)['FIREFOX_NIGHTLY'];
                 if ($json_data !== null) {
                     Cache::setKey($cache_id, $json_data);
                 }
             }
         } else {
             // Cache is disabled. Just read the value.
-            $json_data = json_decode(file_get_contents($this->json_source), true)['FIREFOX_AURORA'];
+            $json_data = json_decode(file_get_contents($this->json_source), true)['FIREFOX_NIGHTLY'];
         }
 
         return $json_data;
