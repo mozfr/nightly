@@ -111,7 +111,7 @@ img.image {
     font-family: 'FiraSans';
     font-size: 80px;
     letter-spacing: -3px;
-    background: url('../img/firefox_nightly.png');
+    background: url('../img/firefox_nightly.png?v=2');
     background-repeat: no-repeat;
     background-position: 0 7px, top right;
     height: 155px;
