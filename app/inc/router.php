@@ -31,8 +31,8 @@ if (substr($temp_url['path'], -1) != '/') {
 }
 
 // Load Twig
-$loader = new Twig_Loader_Filesystem([__DIR__ . '/../templates']);
-$twig = new Twig_Environment($loader);
+$loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/../templates');
+$twig = new \Twig\Environment($loader);
 $twig->addGlobal('path', $webroot_folder);
 
 // Dispatch urls, use it only in web context
