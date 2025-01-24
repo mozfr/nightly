@@ -7,7 +7,7 @@ class Version
 {
     public $version;
     public $json_source = 'https://product-details.mozilla.org/1.0/firefox_versions.json';
-    public $base_link = 'https://archive.mozilla.org/pub/firefox/nightly/latest-mozilla-central-l10n/';
+    public $base_link = 'https://download.mozilla.org/';
 
     public function __construct($locale = 'fr')
     {
@@ -46,14 +46,14 @@ class Version
      */
     public function getFirefoxLinks()
     {
-        $lead_link = $this->base_link . 'firefox-' . $this->version . '.' . $this->locale . '.';
+        $lead_link = $this->base_link . '?product=firefox-nightly-latest-l10n-ssl&lang=' . $this->locale;
 
         return [
-            'win32' => $lead_link . 'win32.installer.exe',
-            'win64' => $lead_link . 'win64.installer.exe',
-            'lin32' => $lead_link . 'linux-i686.tar.xz',
-            'lin64' => $lead_link . 'linux-x86_64.tar.xz',
-            'macos' => $lead_link . 'mac.dmg',
+            'win32' => $lead_link . '&os=win',
+            'win64' => $lead_link . '&os=win64',
+            'lin32' => $lead_link . '&os=linux',
+            'lin64' => $lead_link . '&os=linux64',
+            'macos' => $lead_link . '&os=osx',
         ];
     }
 }
