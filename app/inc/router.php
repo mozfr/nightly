@@ -33,7 +33,6 @@ if (substr($temp_url['path'], -1) != '/') {
 // Load Twig
 $loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/../templates');
 $twig = new \Twig\Environment($loader);
-$twig->addGlobal('path', $webroot_folder);
 
 // Dispatch urls, use it only in web context
 if (php_sapi_name() != 'cli') {
