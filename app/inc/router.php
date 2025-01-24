@@ -4,7 +4,7 @@ $url  = parse_url($_SERVER['REQUEST_URI']);
 $file = pathinfo($url['path']);
 
 // Don't process non-PHP files, even if they don't exist on the server
-if (isset($file['extension']) && $file['extension'] != 'php' && ! $api_url) {
+if (isset($file['extension']) && $file['extension'] != 'php') {
     return false;
 }
 
