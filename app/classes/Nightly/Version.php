@@ -51,8 +51,8 @@ class Version
         return [
             'win32' => $lead_link . 'win32.installer.exe',
             'win64' => $lead_link . 'win64.installer.exe',
-            'lin32' => $lead_link . 'linux-i686.tar.bz2',
-            'lin64' => $lead_link . 'linux-x86_64.tar.bz2',
+            'lin32' => $lead_link . 'linux-i686.tar.xz',
+            'lin64' => $lead_link . 'linux-x86_64.tar.xz',
             'macos' => $lead_link . 'mac.dmg',
         ];
     }
