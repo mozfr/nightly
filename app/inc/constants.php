@@ -2,9 +2,14 @@
 
 // Constants for the project
 define('INSTALL_ROOT',  realpath('../') . '/');
-define('WEB_ROOT',      INSTALL_ROOT . 'web/');
-define('APP_ROOT',      INSTALL_ROOT . 'app/');
-define('CONFIG',        APP_ROOT . 'config/');
-define('INC',           APP_ROOT . 'inc/');
-define('VIEWS',         APP_ROOT . 'views/');
-define('MODELS',        APP_ROOT . 'models/');
+
+const WEB_ROOT = INSTALL_ROOT . 'web/';
+const APP_ROOT = INSTALL_ROOT . 'app/';
+const CONFIG   = APP_ROOT . 'config/';
+const INC      = APP_ROOT . 'inc/';
+const VIEWS    = APP_ROOT . 'views/';
+const MODELS   = APP_ROOT . 'models/';
+// Cache class
+const CACHE_PATH    = INSTALL_ROOT . 'cache/';
+const CACHE_TIME    =  7200;
+const CACHE_ENABLED = true;

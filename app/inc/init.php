@@ -18,8 +18,3 @@ require $settings_file;
 
 // Autoloading of classes (both /vendor and /classes)
 require_once INSTALL_ROOT . 'vendor/autoload.php';
-
-// Cache class
-define('CACHE_ENABLED', true);
-define('CACHE_PATH', INSTALL_ROOT . 'cache/');
-define('CACHE_TIME', 7200);
