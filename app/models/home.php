@@ -1,3 +1,3 @@
 <?php
 
-$current = new \Nightly\Version;
+$current = new \Nightly\Version();

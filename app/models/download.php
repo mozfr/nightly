@@ -19,11 +19,6 @@ $stats_file = INSTALL_ROOT . 'data/stats.json';
 $json_obj = new Json($stats_file);
 if (file_exists($stats_file)) {
     $stats = $json_obj->fetchContent();
-    if (! is_array($stats)) {
-        trigger_error("JSON content is not an array, aborting stats recording.",
-                      E_USER_ERROR);
-        exit;
-    }
 } else {
     $stats = [
         'year' => [
@@ -57,6 +52,9 @@ if ($os == 'unknown') {
     $os = 'win64';
 }
 
-// Start the download
-header('Location: ' . (new Version)->getFirefoxLinks()[$os]);
+// Start the download, prevent browser caching
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+header('Location: ' . (new Version)->getFirefoxLinks()[$os], true, 302);
 exit;
