@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /download/ # this is a redirect to download.mozilla.org
+Disallow: /ads.txt # we don't have adsense, prevent GoogleBot 404s

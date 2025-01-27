@@ -10,8 +10,8 @@ switch ($url['path']) {
     case '/participer':
         $view = 'contribute';
         break;
-    case '/stats':
-        $model = 'stats';
+    case '/download':
+        $model = 'download';
         break;
     default:
         $view = '404';
