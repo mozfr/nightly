@@ -3,6 +3,7 @@
 $urls = [
     '/'          => 'root',
     'a-propos'   => 'about',
-    'participer' => 'contribute',
     'download'   => 'download',
+    'participer' => 'contribute',
+    'stats'      => 'stats',
 ];
