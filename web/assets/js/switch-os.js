@@ -14,7 +14,7 @@ if (window.location.hash == '#linux') {
 }
 
 // Switch screenshot and tabs when clicking on a tab
-$('.tabs a').click(function (e) {
+$('.tabs a').on('click', function (e) {
     e.preventDefault();
     // Make sure no panel is shown using CSS (remove hash)
     history.pushState("", document.title, window.location.pathname);
