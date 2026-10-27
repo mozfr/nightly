@@ -44,9 +44,7 @@ class Version
         $lead_link = $this->base_link . '?product=firefox-nightly-latest-l10n-ssl&lang=fr&os=';
 
         return [
-            'win32' => $lead_link . 'win',
             'win64' => $lead_link . 'win64',
-            'lin32' => $lead_link . 'linux',
             'lin64' => $lead_link . 'linux64',
             'macos' => $lead_link . 'osx',
         ];

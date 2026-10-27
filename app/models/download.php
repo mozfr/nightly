@@ -11,7 +11,7 @@ if (! isset($_GET['os'])) {
 
 $os = $_GET['os'];
 // We only accept a limited set of values
-if (! in_array($_GET['os'], ['win32', 'win64', 'lin32', 'lin64', 'macos']))  {
+if (! in_array($_GET['os'], ['win64', 'lin64', 'macos']))  {
     $os = 'unknown';
 }
 
@@ -27,9 +27,7 @@ if (file_exists($stats_file)) {
                     date('m') => 0,
                 ],
                 'os' => [
-                    'win32'   => 0,
                     'win64'   => 0,
-                    'lin32'   => 0,
                     'lin64'   => 0,
                     'macos'   => 0,
                     'unknown' => 0,
